@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include <list>
+//#include  <iterator>
 
 class Student // Единственный класс, из которого будет 10 объектов
 {
@@ -38,16 +40,16 @@ int exec(Student student[10]); // Главный цикл
 
 int middleCounter();//сюда передаётся массив оценок одного студента, выводится средний балл
 
-//создать список
+//создать список list <Student> students
 
-//добавить студента в список
+//добавить студента в список insert (n, студент)
 
 //отсортировать список по возрастанию (здесь быстрой сортировкой)
 
 //отсортировать список по убыванию
 
-//удалить список
+//удалить список ???
 
-void printStudents(Student Student[10]); // Вывести имена и номера групп студентов
+void printStudents(Student Student[10]); // Вывести имена и номера групп студентов copy(myspisok.begin(), myspisok.end(), ostream_iterator<int>(cout," "));
 
 #endif // STUDENTSORTER_H
