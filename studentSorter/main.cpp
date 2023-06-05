@@ -1,8 +1,8 @@
-#include "studentSorter.h"
+#include "student.h"
 
 int main()
 {
-    Student mass[10] = {
+    Student array[10] = {
                          {"I.I.Ivanov", 1,{5,4,5,4,5}},
                          {"A.A.Alexeev", 1,{2,2,2,2,2}},
                          {"P.P.Platonov", 2,{3,4,3,4,3}},
@@ -15,9 +15,6 @@ int main()
                          {"A.A.Ivanov", 5,{5,4,5,4,5}}
                        };
 
-    sorter();
-
-    studentPrinter();
 
     return 0;
 }

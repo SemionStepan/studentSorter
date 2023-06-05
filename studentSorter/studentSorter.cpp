@@ -1,2 +1,6 @@
-#include "studentSorter.h"
+#include "student.h"
 
+Student sorter()
+{
+
+}
