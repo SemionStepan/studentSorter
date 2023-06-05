@@ -19,6 +19,10 @@ private:
 
 public:
     Student(string name, int groupNumber, int grades[5]);
+
+    inline string getName() { return name; }
+    inline int getGroupNumber() { return groupNumber; }
+    int getGrades();
 };
 
 class StudentMass
@@ -27,6 +31,7 @@ class StudentMass
 public:
     StudentMass(Student array[10]);
 
+    void addStudent();
     Student sorter();
     void studentPrinter();
 
