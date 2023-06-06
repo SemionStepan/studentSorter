@@ -14,30 +14,45 @@ struct Student
 private:
     string name;
     int groupNumber;
-    int grades[5];
+    int math;
+    int russian;
+    int pe;
+    int science;
+    int english;
+
 //    Student &student;
 
 public:
-    Student(string name, int groupNumber, int grades[5])
+    Student(string name, int groupNumber, int math, int russian, int pe, int science, int english)
     {
         name = name;
         groupNumber= groupNumber;
-        grades = grades;
+        math = math;
+        russian = russian;
+        pe = pe;
+        science = science;
+        english = english;
     }
 
     Student() : groupNumber(0)
     {
-        grades[0] = 0;
-        grades[1] = 0;
-        grades[2] = 0;
-        grades[3] = 0;
-        grades[4] = 0;
+        math = 0;
+        russian = 0;
+        pe = 0;
+        science = 0;
+        english = 0;
     };
 
-    inline string getName() { return *name; }
+    inline string getName() { return name; }
     inline int getGroupNumber() { return groupNumber; }
-    int getGrades();
+    inline int getMath() { return math; }
+    inline int getRussian() { return russian; }
+    inline int getPe() { return pe; }
+    inline int getScience() { return science; }
+    inline int getEnglish() { return english; }
 };
+
+int comp(Student* a, Student* b);
 
 /* Создай массив, добавь туда студентов, std qsort из отсортирует, придумай как вывести
 {
