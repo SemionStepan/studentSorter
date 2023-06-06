@@ -18,16 +18,31 @@ private:
 //    Student &student;
 
 public:
-    Student(string name, int groupNumber, int grades[5]);
+    Student(string name, int groupNumber, int grades[5])
+    {
+        name = name;
+        groupNumber= groupNumber;
+        grades = grades;
+    }
 
-    inline string getName() { return name; }
+    Student() : groupNumber(0)
+    {
+        grades[0] = 0;
+        grades[1] = 0;
+        grades[2] = 0;
+        grades[3] = 0;
+        grades[4] = 0;
+    };
+
+    inline string getName() { return *name; }
     inline int getGroupNumber() { return groupNumber; }
     int getGrades();
 };
 
-class StudentMass
+/* Создай массив, добавь туда студентов, std qsort из отсортирует, придумай как вывести
 {
     Student array[10];
+
 public:
     StudentMass(Student array[10]);
 
@@ -36,6 +51,6 @@ public:
     void studentPrinter();
 
 };
-
+*/
 
 #endif // STUDENTSORTER_H
