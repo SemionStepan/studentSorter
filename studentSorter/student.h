@@ -52,20 +52,6 @@ public:
     inline int getEnglish() { return english; }
 };
 
-int comp(Student* a, Student* b);
-
-/* Создай массив, добавь туда студентов, std qsort из отсортирует, придумай как вывести
-{
-    Student array[10];
-
-public:
-    StudentMass(Student array[10]);
-
-    void addStudent();
-    Student sorter();
-    void studentPrinter();
-
-};
-*/
+int comp(const void * a, const void * b);
 
 #endif // STUDENTSORTER_H
