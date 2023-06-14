@@ -12,10 +12,13 @@ int gpaCounter(Student* student)
   return gpa;
 }
 
-int comp(const void * a, const void * b) // Сравнить двух студентов по их среднему баллу и вернуть того, у которого меньше
+int comp(const void *a, const void *b) //
 {
-    int first = gpaCounter(a);
-    int second = gpaCounter(b);
+  Student *sa = (Student*)a;
+  Student *sb = (Student*)b;
+
+    int first = gpaCounter(sa);
+    int second = gpaCounter(sb);
     if (first < second) return -1;
     if (first > second) return 1;
     return 0;
