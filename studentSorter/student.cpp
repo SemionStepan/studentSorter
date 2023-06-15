@@ -11,23 +11,9 @@ void Student::out()
               << _russian << ", " << _pe << ", " << _science << ", " << _english << ") = " << calculate() << endl;
 }
 
-bool Student::ifExcellent()
+bool Student::excellent()
 {
-    if(_english >= 4)
-    {
-        if(_math >= 4)
-        {
-            if(_pe >= 4)
-            {
-                if(_russian >= 4)
-                {
-                    if(_science >= 4)
-                        return true;
-                }
-            }
-        }
-    }
-    return false;
+    return ((_english >= 4) && (_math >= 4) && (_pe >= 4) && (_russian >= 4) && (_science >= 4)) ? true : false;
 }
 
 Students::Students(vector<Student> &students) : _students(students)
@@ -65,7 +51,7 @@ void Students::print()
 {
     for(auto student : _students)
     {
-        if(student.ifExcellent())
+        if(student.excellent())
         {
             student.out();
         }

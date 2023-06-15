@@ -35,7 +35,7 @@ public:
 
     float calculate();
     void out();
-    bool ifExcellent();
+    bool excellent();
 };
 
 struct Students
