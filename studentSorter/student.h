@@ -7,6 +7,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
@@ -33,7 +34,7 @@ public:
         _english = english;
     }
 
-    float calculate();
+    double calculate();
     void out();
     bool excellent();
 };
@@ -47,7 +48,7 @@ public:
     Students(vector <Student> &vec);
     void setRange();
     void out();
-    void print();
+    void printExcellents();
 };
 
 #endif // STUDENTSORTER_H

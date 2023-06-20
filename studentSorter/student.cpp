@@ -1,14 +1,15 @@
 #include "student.h"
 
-float Student::calculate()
+double Student::calculate()
 {
-    return (_english + _math + _pe + _russian + _science) / 5;
+    return (_english + _math + _pe + _russian + _science) / 5.0;
 }
 
 void Student::out()
 {
     std::cout << "[" << _name << "] = " << "{" << _groupNumber << "} (" << _math << ", "
-              << _russian << ", " << _pe << ", " << _science << ", " << _english << ") = " << calculate() << endl;
+              << _russian << ", " << _pe << ", " << _science << ", " << _english << ") = ";
+    printf("%.1f \n", calculate());
 }
 
 bool Student::excellent()
@@ -16,8 +17,7 @@ bool Student::excellent()
     return ((_english >= 4) && (_math >= 4) && (_pe >= 4) && (_russian >= 4) && (_science >= 4)) ? true : false;
 }
 
-Students::Students(vector<Student> &students) : _students(students)
-{}
+Students::Students(vector<Student> &students) : _students(students) {}
 
 void Students::setRange()
 {
@@ -47,7 +47,7 @@ void Students::out()
     }
 }
 
-void Students::print()
+void Students::printExcellents()
 {
     for(auto student : _students)
     {
