@@ -4,38 +4,51 @@
 //Создать массив из десяти элементов такого типа, упорядочить записи по возрастанию среднего балла.
 //Добавить возможность вывода фамилий и номеров групп студентов, имеющих оценки, равные только 4 или 5.
 
-
 #include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
 struct Student
 {
 private:
-    string name;
-    int groupNumber;
-    int grades[5];
-//    Student &student;
+    string _name;
+    int _groupNumber;
+    int _math;
+    int _russian;
+    int _pe;
+    int _science;
+    int _english;
 
 public:
-    Student(string name, int groupNumber, int grades[5]);
+    Student(string name, int groupNumber, int math, int russian, int pe, int science, int english)
+    {
+        _name = name;
+        _groupNumber= groupNumber;
+        _math = math;
+        _russian = russian;
+        _pe = pe;
+        _science = science;
+        _english = english;
+    }
 
-    inline string getName() { return name; }
-    inline int getGroupNumber() { return groupNumber; }
-    int getGrades();
+    double calculate();
+    void out();
+    bool excellent();
 };
 
-class StudentMass
+struct Students
 {
-    Student array[10];
+private:
+    vector <Student> _students;
+
 public:
-    StudentMass(Student array[10]);
-
-    void addStudent();
-    Student sorter();
-    void studentPrinter();
-
+    Students(vector <Student> &vec);
+    void setRange();
+    void out();
+    void printExcellents();
 };
-
 
 #endif // STUDENTSORTER_H
